@@ -136,6 +136,13 @@ html.js .reveal.in{opacity:1;transform:none}
 .skill-col h4{font-family:'JetBrains Mono';font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 .chip{display:inline-block;margin:0 8px 8px 0;padding:8px 14px;border:1px solid var(--border);border-radius:10px;background:var(--panel);font-size:14px;transition:border-color .25s,transform .25s}
 .chip:hover{border-color:var(--accent);transform:translateY(-2px)}
+.exploring{margin-top:44px;border-top:1px solid var(--border);padding-top:34px}
+.exploring h4{font-family:'JetBrains Mono';font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px}
+.exploring h4 span{text-transform:none;letter-spacing:0;color:var(--muted);font-weight:400}
+.explore-chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip-ex{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px dashed rgba(129,140,248,.5);border-radius:10px;background:rgba(129,140,248,.06);font-size:14px;color:var(--text);transition:border-color .25s,transform .25s,background .25s}
+.chip-ex::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent2);box-shadow:0 0 8px var(--accent2)}
+.chip-ex:hover{border-color:var(--accent2);background:rgba(129,140,248,.12);transform:translateY(-2px)}
 .langbar{margin-bottom:14px}
 .langbar .row{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px}
 .langbar .row .lvl{color:var(--muted);font-family:'JetBrains Mono';font-size:12px}
@@ -399,6 +406,20 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
         <div class="langbar"><div class="row"><span>Italian · Spanish</span><span class="lvl">A2</span></div><div class="track"><i style="width:30%"></i></div></div>
       </div>
     </div>
+
+    <div class="exploring">
+      <h4>Currently exploring <span>— where I'm actively going deeper, with an eye on AI for drug discovery &amp; healthcare</span></h4>
+      <div class="explore-chips">
+        <span class="chip-ex">Foundation models for pathology &amp; medical imaging</span>
+        <span class="chip-ex">Multimodal biomedical AI (imaging + omics + clinical)</span>
+        <span class="chip-ex">Federated &amp; privacy-preserving learning</span>
+        <span class="chip-ex">Graph neural networks for molecular data</span>
+        <span class="chip-ex">Diffusion &amp; generative models</span>
+        <span class="chip-ex">Survival analysis &amp; causal inference</span>
+        <span class="chip-ex">Large language &amp; multimodal transformers</span>
+        <span class="chip-ex">Interpretability for clinical decision support</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -406,7 +427,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
   <div class="wrap reveal contact">
     <span class="sec-tag">08 — Contact</span>
     <h2 class="sec-title">Let's talk models &amp; minds.</h2>
-    <p class="lede" style="margin:0 auto">Open to <strong>machine-learning &amp; research roles</strong>, collaborations, and good conversations across ML and neuroscience. Based in Paris — happy to talk online or in person.</p>
+    <p class="lede" style="margin:0 auto">Open to <strong>machine-learning roles in healthcare &amp; biomedical AI</strong>, research collaborations, and good conversations across ML and neuroscience. Based in Paris — happy to talk online or in person.</p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:stefania.zoi18@gmail.com">Email me</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/stefania-zoi-0b51a2263/" target="_blank" rel="noopener">LinkedIn</a>
