@@ -48,6 +48,9 @@ h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent2) 55%,var(
 .lede{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:660px;margin-bottom:36px;animation:fadeUp .8s .2s ease both}
 .lede strong{color:var(--text);font-weight:500}
 .cta{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .8s .3s ease both}
+.creds{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;animation:fadeUp .8s .45s ease both}
+.cred{font-family:'JetBrains Mono';font-size:12.5px;color:var(--muted);letter-spacing:.3px}
+.cred em{color:var(--text);font-style:normal;font-weight:500}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .25s,box-shadow .25s,border-color .25s}
 .btn-primary{background:var(--accent);color:#04211d;box-shadow:var(--glow)}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 55px rgba(94,234,212,.45)}
@@ -89,6 +92,8 @@ html.js .reveal.in{opacity:1;transform:none}
 .card::before{content:'';position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0),rgba(94,234,212,.08),transparent 40%);opacity:0;transition:opacity .4s}
 .card:hover::before{opacity:1}
 .card:hover{transform:translateY(-6px);border-color:rgba(94,234,212,.4)}
+.cards .card:last-child:nth-child(odd){grid-column:1/-1}
+@media(max-width:720px){.cards .card:last-child:nth-child(odd){grid-column:auto}}
 .card .ic{font-size:26px;margin-bottom:16px;display:block}
 .card h3{font-family:'Space Grotesk';font-size:20px;margin-bottom:10px;letter-spacing:-.3px}
 .card p{color:var(--muted);font-size:15px}
@@ -169,10 +174,17 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span>Marie Curie PhD Fellow · Institut de la Vision</div>
     <h1>Stefania Zoi<br><span class="grad">machine learning<br>for the retina.</span></h1>
-    <p class="lede">Computational neuroscientist and <strong>Marie Skłodowska-Curie BE-LIGHT Fellow</strong> at <strong>Sorbonne Université, Institut de la Vision</strong>. I work with <strong>Gaussian processes, Bayesian inference, and deep learning</strong> to model how the retina encodes light — and build <strong>light-based biomedical diagnostics</strong> on top of it.</p>
+    <p class="lede">Computational neuroscientist and <strong>Marie Skłodowska-Curie Fellow</strong> at <strong>Sorbonne Université, Institut de la Vision</strong>. I design <strong>machine-learning and deep-learning</strong> systems grounded in <strong>Gaussian processes, Bayesian inference, and information theory</strong> — turning noisy, high-dimensional signals into models that are accurate, calibrated, and interpretable.</p>
     <div class="cta">
       <a class="btn btn-primary" href="#research">Explore my work →</a>
+      <a class="btn btn-ghost" href="mailto:stefania.zoi18@gmail.com">Get in touch</a>
       <a class="btn btn-ghost" href="https://github.com/stefaniazoingb" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="creds">
+      <span class="cred">✦ Marie Skłodowska-Curie Fellow</span>
+      <span class="cred">✦ Published in <em>Nature&nbsp;Scientific&nbsp;Reports</em></span>
+      <span class="cred">✦ ML at Thales Aerospace</span>
+      <span class="cred">✦ 5 languages · 4 countries</span>
     </div>
   </div>
 </header>
@@ -196,6 +208,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
       <div>
         <p>I'm a PhD researcher working where <strong>neuroscience, machine learning, and optics</strong> meet. My doctoral project, <strong>BE-LIGHT</strong>, develops light-based technologies and ML models to improve biomedical diagnosis — with a focus on the <strong>optical decomposition of the retina</strong> as a window into neural function.</p>
         <p>Much of my modeling is <strong>probabilistic and Bayesian</strong>. I lean on <strong>Gaussian processes</strong> — nonparametric priors over functions — to model noisy, high-dimensional signals with calibrated uncertainty rather than a single point estimate. That framing runs through my work: GP models of natural images and video, GP regression on neural and physiological recordings, and Bayesian neural models that quantify <em>how confident</em> a prediction is, not just what it is. When you're building a diagnostic, that uncertainty is the point.</p>
+        <p>I also think in the language of <strong>information theory</strong>. Shannon entropy and mutual information give a principled way to ask what a neural or optical signal actually carries, and the <strong>efficient-coding</strong> view frames the retina as a system that compresses the visual world into as few bits as possible. It's the same instinct behind good representation learning — keep the information that matters, discard the rest.</p>
         <p>My path is deliberately interdisciplinary. I started in <strong>psychology and neuropsychology</strong> in Greece, moved into <strong>biomedical engineering</strong> in Paris, and now work on the computational and mathematical side of neuroscience — probabilistic modeling, deep learning, and connectionist theory. Along the way I've built <strong>Bayesian neural models</strong> of pilots' physiological states, run <strong>fMRI and 7T</strong> studies of arousal, and co-authored work published in <em>Scientific Reports</em>.</p>
         <p>I'm drawn to problems where careful modeling meets real signals — a kernel, a posterior, a recording — and reveals how a biological or artificial system actually learns to see.</p>
       </div>
@@ -221,7 +234,8 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
       <div class="card"><span class="ic">👁️</span><h3>The Retina, Decomposed</h3><p>Machine-learning and computational models for the optical decomposition of the retina — understanding how retinal circuits transform incoming light into neural signal.</p></div>
       <div class="card"><span class="ic">💡</span><h3>Light-Based Diagnostics</h3><p>Developing photonic, light-based technologies for biomedical diagnosis within the European BE-LIGHT interdisciplinary network.</p></div>
       <div class="card"><span class="ic">🧠</span><h3>Neural Coding &amp; Vision</h3><p>Spike-triggered analysis, receptive-field estimation, and self-supervised representation learning — how biological and artificial visual systems build the features they use to see.</p></div>
-      <div class="card"><span class="ic">🌀</span><h3>Dynamics &amp; Time Series</h3><p>Nonlinear dynamical models of excitability, bifurcation analysis, and ordinal-pattern methods for characterizing complex neural time series.</p></div>
+      <div class="card"><span class="ic">🔤</span><h3>Information Theory</h3><p>Quantifying what a signal actually carries: Shannon entropy, mutual information between stimulus and neural response, and the efficient-coding view of sensory systems — how the retina compresses the visual world to spend the fewest bits.</p></div>
+      <div class="card"><span class="ic">🌀</span><h3>Dynamics &amp; Complexity</h3><p>Nonlinear models of excitability, bifurcation analysis, and ordinal-pattern / permutation-entropy methods for measuring the complexity and predictability of neural time series.</p></div>
     </div>
   </div>
 </section>
@@ -229,13 +243,13 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
 <section id="impact">
   <div class="wrap reveal">
     <span class="sec-tag">03 — What I Bring</span>
-    <h2 class="sec-title">Research rigor, engineering delivery.</h2>
-    <p class="lede" style="max-width:720px">I translate hard, ambiguous problems into working models — and ship the code, analysis, and results end to end. What that looks like on a team:</p>
+    <h2 class="sec-title">Research depth, engineering delivery.</h2>
+    <p class="lede" style="max-width:740px">I take hard, ambiguous, data-heavy problems and turn them into working models — then own the code, the evaluation, and the story end to end. On an AI team that looks like:</p>
     <div class="cards">
-      <div class="card"><span class="ic">🤖</span><h3>ML &amp; Deep Learning</h3><p>Designing, training, and probing neural networks in PyTorch — computer vision, self-supervised representation learning, and rigorous model evaluation.</p></div>
-      <div class="card"><span class="ic">📐</span><h3>Applied Statistics &amp; Bayesian Modeling</h3><p>Turning noisy, high-dimensional, multi-modal data into calibrated, interpretable models — Bayesian inference, uncertainty, and principled experimental design.</p></div>
-      <div class="card"><span class="ic">🔬</span><h3>End-to-End R&amp;D</h3><p>Owning the full pipeline: data acquisition, cleaning, modeling, and communication of results — across Python, R, and MATLAB, in fast-moving research settings.</p></div>
-      <div class="card"><span class="ic">🌍</span><h3>Cross-Disciplinary &amp; International</h3><p>Delivering in interdisciplinary, multinational teams (EU network, industry, clinical) — bridging engineering, science, and stakeholders in five languages.</p></div>
+      <div class="card"><span class="ic">🤖</span><h3>Deep Learning &amp; Computer Vision</h3><p>Designing, training, and probing neural networks in <strong>PyTorch</strong> — self-supervised representation learning, vision models, and rigorous evaluation of what a model has actually learned.</p></div>
+      <div class="card"><span class="ic">📐</span><h3>Probabilistic ML &amp; Uncertainty</h3><p>Gaussian processes, Bayesian deep learning, and information-theoretic analysis — models that are <strong>calibrated and interpretable</strong>, not just accurate. I know when to trust a prediction.</p></div>
+      <div class="card"><span class="ic">🔬</span><h3>End-to-End Ownership</h3><p>The full pipeline — data acquisition, cleaning, modeling, and clear communication of results — shipped independently across Python, R, and MATLAB in fast-moving research and industry settings.</p></div>
+      <div class="card"><span class="ic">🌍</span><h3>Proven in the Real World</h3><p>Selected for a highly competitive <strong>EU Marie Curie</strong> fellowship, <strong>published in Nature</strong>, and trusted with ML for a global <strong>aerospace</strong> company — delivering in multinational teams, in five languages.</p></div>
     </div>
   </div>
 </section>
@@ -362,7 +376,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
       <div class="skill-col">
         <h4>Methods &amp; Instruments</h4>
-        <span class="chip">Gaussian processes</span><span class="chip">Bayesian inference</span><span class="chip">Deep learning</span><span class="chip">fMRI / 7T</span><span class="chip">EEG · ECG · EMG · EDA</span><span class="chip">Eye tracking</span><span class="chip">SPSS · Origin</span>
+        <span class="chip">Gaussian processes</span><span class="chip">Bayesian inference</span><span class="chip">Information theory</span><span class="chip">Deep learning</span><span class="chip">fMRI / 7T</span><span class="chip">EEG · ECG · EMG · EDA</span><span class="chip">Eye tracking</span><span class="chip">SPSS · Origin</span>
       </div>
       <div class="skill-col">
         <h4>Languages</h4>
@@ -380,7 +394,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
   <div class="wrap reveal contact">
     <span class="sec-tag">08 — Contact</span>
     <h2 class="sec-title">Let's talk models &amp; minds.</h2>
-    <p class="lede" style="margin:0 auto">Open to research collaborations, scientific conversations, and connecting across neuroscience, machine learning, and photonics. Based in Paris — happy to talk online or in person.</p>
+    <p class="lede" style="margin:0 auto">Open to <strong>machine-learning &amp; research roles</strong>, collaborations, and good conversations across ML, neuroscience, and photonics. Based in Paris — happy to talk online or in person.</p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:stefania.zoi18@gmail.com">Email me</a>
       <a class="btn btn-ghost" href="https://github.com/stefaniazoingb" target="_blank" rel="noopener">GitHub</a>
@@ -412,14 +426,27 @@ try{
 document.querySelectorAll('.card').forEach(c=>{
   c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});
 });
-// count-up metrics
-const countIO=new IntersectionObserver((es,obs)=>es.forEach(e=>{
-  if(!e.isIntersecting)return; obs.unobserve(e.target);
-  const el=e.target,to=+el.dataset.to,suf=el.dataset.suffix||'';let cur=0;
+// count-up metrics (bulletproof: on-view, on-load, and a hard fallback)
+const mnums=[...document.querySelectorAll('.mnum')];
+function animateCount(el){
+  if(el.dataset.done)return; el.dataset.done='1';
+  const to=+el.dataset.to, suf=el.dataset.suffix||''; let cur=0;
   const step=Math.max(1,Math.ceil(to/28));
-  const t=setInterval(()=>{cur+=step;if(cur>=to){cur=to;clearInterval(t)}el.textContent=cur+suf;},34);
-},{threshold:.5});
-document.querySelectorAll('.mnum').forEach(el=>countIO.observe(el));
+  const t=setInterval(()=>{cur+=step; if(cur>=to){cur=to; clearInterval(t);} el.textContent=cur+suf;},34);
+}
+function inView(el){const r=el.getBoundingClientRect(); return r.top<innerHeight*0.9 && r.bottom>0;}
+try{
+  if('IntersectionObserver' in window){
+    const cio=new IntersectionObserver((es,obs)=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target); obs.unobserve(e.target);}}),{threshold:.25});
+    mnums.forEach(el=>cio.observe(el));
+  }
+  // trigger anything already visible on load
+  mnums.forEach(el=>{if(inView(el))animateCount(el);});
+  // extra safety: also check on scroll
+  addEventListener('scroll',()=>mnums.forEach(el=>{if(inView(el))animateCount(el);}),{passive:true});
+}catch(e){}
+// hard fallback: never leave a metric stuck at 0
+setTimeout(()=>mnums.forEach(el=>{if(!el.dataset.done){el.dataset.done='1'; el.textContent=(+el.dataset.to)+(el.dataset.suffix||'');}}),3000);
 // neural-network particle background
 const cv=document.getElementById('bg-canvas'),ctx=cv.getContext('2d');
 let W,H,pts,DPR=Math.min(devicePixelRatio||1,2);
