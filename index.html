@@ -66,8 +66,10 @@ h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent2) 55%,var(
 section{padding:100px 0;position:relative}
 .sec-tag{font-family:'JetBrains Mono';font-size:13px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;display:block}
 .sec-title{font-family:'Space Grotesk';font-weight:700;font-size:clamp(30px,5vw,46px);letter-spacing:-1px;margin-bottom:22px}
-.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
+.reveal{opacity:1;transform:none}
+html.js .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+html.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:start}
@@ -167,7 +169,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span>Marie Curie PhD Fellow · Institut de la Vision</div>
     <h1>Stefania Zoi<br><span class="grad">machine learning<br>for the retina.</span></h1>
-    <p class="lede">AI &amp; computational neuroscientist, <strong>Marie Skłodowska-Curie BE-LIGHT Fellow</strong> at <strong>Sorbonne Université, Institut de la Vision</strong>. I build <strong>machine-learning and deep-learning models</strong> that decompose how the retina encodes light — and turn cutting-edge research into real <strong>light-based biomedical diagnostics</strong>.</p>
+    <p class="lede">Computational neuroscientist and <strong>Marie Skłodowska-Curie BE-LIGHT Fellow</strong> at <strong>Sorbonne Université, Institut de la Vision</strong>. I work with <strong>Gaussian processes, Bayesian inference, and deep learning</strong> to model how the retina encodes light — and build <strong>light-based biomedical diagnostics</strong> on top of it.</p>
     <div class="cta">
       <a class="btn btn-primary" href="#research">Explore my work →</a>
       <a class="btn btn-ghost" href="https://github.com/stefaniazoingb" target="_blank" rel="noopener">GitHub</a>
@@ -193,8 +195,9 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
     <div class="about-grid about">
       <div>
         <p>I'm a PhD researcher working where <strong>neuroscience, machine learning, and optics</strong> meet. My doctoral project, <strong>BE-LIGHT</strong>, develops light-based technologies and ML models to improve biomedical diagnosis — with a focus on the <strong>optical decomposition of the retina</strong> as a window into neural function.</p>
-        <p>My path is deliberately interdisciplinary. I started in <strong>psychology and neuropsychology</strong> in Greece, moved into <strong>biomedical engineering and bioengineering</strong> in Paris, and now work on the computational and mathematical side of neuroscience — probabilistic models, deep learning, and connectionist theory. Along the way I've built <strong>Bayesian neural models</strong> of pilots' physiological states, run <strong>fMRI and 7T</strong> studies of consciousness and arousal, and co-authored work published in <em>Scientific Reports</em>.</p>
-        <p>I'm drawn to problems where careful modeling meets real signals — a probe, a kernel, a recording — and reveals how a biological or artificial system actually learns to see.</p>
+        <p>Much of my modeling is <strong>probabilistic and Bayesian</strong>. I lean on <strong>Gaussian processes</strong> — nonparametric priors over functions — to model noisy, high-dimensional signals with calibrated uncertainty rather than a single point estimate. That framing runs through my work: GP models of natural images and video, GP regression on neural and physiological recordings, and Bayesian neural models that quantify <em>how confident</em> a prediction is, not just what it is. When you're building a diagnostic, that uncertainty is the point.</p>
+        <p>My path is deliberately interdisciplinary. I started in <strong>psychology and neuropsychology</strong> in Greece, moved into <strong>biomedical engineering</strong> in Paris, and now work on the computational and mathematical side of neuroscience — probabilistic modeling, deep learning, and connectionist theory. Along the way I've built <strong>Bayesian neural models</strong> of pilots' physiological states, run <strong>fMRI and 7T</strong> studies of arousal, and co-authored work published in <em>Scientific Reports</em>.</p>
+        <p>I'm drawn to problems where careful modeling meets real signals — a kernel, a posterior, a recording — and reveals how a biological or artificial system actually learns to see.</p>
       </div>
       <div class="facts">
         <div class="fact"><span class="k">Based in</span><span class="v">Paris, France</span></div>
@@ -213,10 +216,12 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
     <span class="sec-tag">02 — Research</span>
     <h2 class="sec-title">What I work on.</h2>
     <div class="cards">
-      <div class="card"><span class="ic">👁️</span><h3>The Retina, Decomposed</h3><p>Machine-learning and computational models for the optical decomposition of the retina — understanding how retinal circuits transform light into neural signal.</p></div>
+      <div class="card"><span class="ic">📈</span><h3>Gaussian Processes</h3><p>Nonparametric, kernel-based priors over functions. I use GPs to model natural images, video, and neural signals — choosing kernels that encode spatiotemporal structure and reading the posterior for principled, uncertainty-aware predictions.</p></div>
+      <div class="card"><span class="ic">📊</span><h3>Bayesian Inference</h3><p>Modeling from priors and likelihoods to posteriors: Bayesian neural models, probabilistic regression, and calibrated uncertainty on noisy, multi-modal data — so a prediction comes with how much to trust it.</p></div>
+      <div class="card"><span class="ic">👁️</span><h3>The Retina, Decomposed</h3><p>Machine-learning and computational models for the optical decomposition of the retina — understanding how retinal circuits transform incoming light into neural signal.</p></div>
       <div class="card"><span class="ic">💡</span><h3>Light-Based Diagnostics</h3><p>Developing photonic, light-based technologies for biomedical diagnosis within the European BE-LIGHT interdisciplinary network.</p></div>
-      <div class="card"><span class="ic">🧠</span><h3>Neural Coding &amp; Vision</h3><p>Representation learning, spike-triggered analysis, and how biological and artificial visual systems build the features they rely on to see.</p></div>
-      <div class="card"><span class="ic">📊</span><h3>Bayesian &amp; Probabilistic Models</h3><p>Bayesian neural models and probabilistic methods for multi-modal physiological data — from Gaussian processes to forecasting cognitive and physiological states.</p></div>
+      <div class="card"><span class="ic">🧠</span><h3>Neural Coding &amp; Vision</h3><p>Spike-triggered analysis, receptive-field estimation, and self-supervised representation learning — how biological and artificial visual systems build the features they use to see.</p></div>
+      <div class="card"><span class="ic">🌀</span><h3>Dynamics &amp; Time Series</h3><p>Nonlinear dynamical models of excitability, bifurcation analysis, and ordinal-pattern methods for characterizing complex neural time series.</p></div>
     </div>
   </div>
 </section>
@@ -309,8 +314,8 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
       <span class="num">03</span>
       <div>
         <h3>Gaussian Processes on Natural Images &amp; Video</h3>
-        <p>Kernel-based probabilistic modeling of natural scenes — GP priors and posteriors that capture spatiotemporal structure, with visualizations of samples morphing from prior to data-conditioned posterior.</p>
-        <div class="tags"><span class="tag">Gaussian Processes</span><span class="tag">Kernels</span><span class="tag">NumPy · SciPy</span></div>
+        <p>Kernel-based probabilistic modeling of natural scenes: constructing GP priors whose covariance encodes spatial and temporal structure, conditioning on data to obtain the posterior, and tuning kernel hyperparameters by marginal likelihood. Includes visualizations of samples morphing from prior to data-conditioned posterior, with uncertainty bands throughout.</p>
+        <div class="tags"><span class="tag">Gaussian Processes</span><span class="tag">Kernels</span><span class="tag">Bayesian inference</span><span class="tag">NumPy · SciPy</span></div>
       </div>
       <span class="arrow">↗</span>
     </a>
@@ -319,8 +324,8 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
       <span class="num">04</span>
       <div>
         <h3>Bayesian Neural Model of Operator State</h3>
-        <p>At Thales AVS: a Bayesian neural model forecasting how quickly pilots return to physiological baseline, fusing eye-tracking, ECG, respiration and accelerometer signals recorded during flight simulation.</p>
-        <div class="tags"><span class="tag">Bayesian modeling</span><span class="tag">Multi-modal signals</span><span class="tag">Physiology</span></div>
+        <p>At Thales AVS: a Bayesian neural model forecasting how quickly pilots return to physiological baseline, fusing eye-tracking, ECG, respiration and accelerometer signals recorded during flight simulation. The Bayesian treatment yields predictions with calibrated uncertainty — essential when the output informs safety-critical decisions.</p>
+        <div class="tags"><span class="tag">Bayesian deep learning</span><span class="tag">Uncertainty</span><span class="tag">Multi-modal fusion</span><span class="tag">Physiology</span></div>
       </div>
       <span class="arrow">↗</span>
     </a>
@@ -357,7 +362,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
       <div class="skill-col">
         <h4>Methods &amp; Instruments</h4>
-        <span class="chip">Bayesian modeling</span><span class="chip">Deep learning</span><span class="chip">fMRI / 7T</span><span class="chip">EEG · ECG · EMG · EDA</span><span class="chip">Eye tracking</span><span class="chip">SPSS · Origin</span>
+        <span class="chip">Gaussian processes</span><span class="chip">Bayesian inference</span><span class="chip">Deep learning</span><span class="chip">fMRI / 7T</span><span class="chip">EEG · ECG · EMG · EDA</span><span class="chip">Eye tracking</span><span class="chip">SPSS · Origin</span>
       </div>
       <div class="skill-col">
         <h4>Languages</h4>
@@ -389,11 +394,21 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13px;border
 </footer>
 
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-const nav = document.querySelector('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
-const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Progressive enhancement: content is visible by default; JS only animates it in.
+const reveals = document.querySelectorAll('.reveal');
+function showAll(){reveals.forEach(el=>el.classList.add('in'));}
+try{
+  document.documentElement.classList.add('js');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.querySelector('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:0,rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(el=>io.observe(el));
+    // failsafe: reveal anything still hidden after 2.5s
+    setTimeout(()=>reveals.forEach(el=>{if(!el.classList.contains('in'))el.classList.add('in');}),2500);
+  } else { showAll(); }
+}catch(err){ showAll(); }
 document.querySelectorAll('.card').forEach(c=>{
   c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});
 });
