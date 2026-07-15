@@ -2,7 +2,6 @@
 
 Personal website of **Stefania Zoi** — Marie Skłodowska-Curie PhD Fellow in Computational Neuroscience & Machine Learning at Sorbonne Université, Institut de la Vision (Paris).
 
-A single self-contained `index.html` (no build step, no dependencies), served via **GitHub Pages**.
 
 **Live at:** https://stefaniazoibb.github.io
 
